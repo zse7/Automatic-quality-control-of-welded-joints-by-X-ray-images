@@ -1,0 +1,8 @@
+torch>=1.13
+opencv-python
+Pillow
+numpy
+matplotlib
+pyyaml
+tqdm
+pycocotools
