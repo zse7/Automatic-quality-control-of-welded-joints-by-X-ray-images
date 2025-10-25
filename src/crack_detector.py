@@ -329,7 +329,7 @@ def check_all_annotations():
         else:
             print(f"{split_type}: папка не найдена")
 
-if name == "main":
+if __name__ == "__main__":
     check_all_annotations()
     print("\nВАРИАНТ 1: Соответствие папкам (training -> train, validation -> val, testing -> test)")
     create_crack_annotations_for_train_val_test()
