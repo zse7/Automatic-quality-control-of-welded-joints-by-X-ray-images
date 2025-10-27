@@ -1,3 +1,4 @@
 data/data
 data/dataset_2_split
 models/m60.pt
+models/best.pt
