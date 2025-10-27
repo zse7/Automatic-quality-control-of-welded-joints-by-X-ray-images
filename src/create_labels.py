@@ -65,16 +65,12 @@ def create_defect_annotations_fixed():
                     dst_img = img_out_dir / img_name
                     dst_lbl = lbl_out_dir / (Path(img_name).stem + ".txt")
 
-                    # Копируем изображение
                     shutil.copy2(src_img, dst_img)
 
-                    # Создаём фиксированную аннотацию
                     with open(dst_lbl, "w", encoding="utf-8") as f:
                         f.write(f"{class_id} 0.5 0.5 1.0 1.0\n")
 
                 print(f"{split.upper()}: создано {len(image_files)} аннотаций")
-
-    print("\nВсе аннотации успешно созданы.")
 
 if __name__ == "__main__":
     create_defect_annotations_fixed()

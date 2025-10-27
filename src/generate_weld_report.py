@@ -1,15 +1,14 @@
 import csv
 
-# Параметры норм для дефектов
 defect_limits = {
     "Porosity": {
-        "single_max": 1.5,  # мм, допустимый диаметр
+        "single_max": 1.5, 
         "sum_allowed": 20.0,
         "sum_not_allowed": 50.0,
         "chain_max": 25.0
     },
     "Slag Inclusion": {
-        "length_allowed": 3.0,  # мм
+        "length_allowed": 3.0,  
         "width_allowed": 0.5,
         "length_not_allowed": 5.0,
         "width_not_allowed": 1.0,
@@ -30,7 +29,6 @@ defect_limits = {
     }
 }
 
-# Определение статуса дефекта
 def determine_status(defect_type, size_metric):
     if defect_type == "Porosity":
         d = size_metric.get("diameter", 0)
@@ -78,7 +76,6 @@ def determine_status(defect_type, size_metric):
     else:
         return "неизвестно"
 
-# Функция генерации CSV отчета
 def generate_csv_report(results, out_csv="report.csv"):
     """
     results: список словарей с ключами:
